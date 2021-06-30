@@ -78,6 +78,7 @@
 
 <script>
 import { ADD_ENCOMENDA } from "@/store/encomendas/encomenda.constants";
+import { EDIT_PRODUTO } from "@/store/produtos/produto.constants";
 import HeaderPage from "@/components/HeaderPage.vue";
 import router from "@/router";
 import { mapGetters } from "vuex";
@@ -97,7 +98,8 @@ export default {
           cliente: "",
           comentarios: []
         },
-        comentario: ""
+        comentario: "",
+        produto: ""
     }
   },
   computed: {
@@ -107,6 +109,12 @@ export default {
   },
   methods: {
     add() {
+      if(this.produto.stock < this.encomenda.quantidade) {
+          this.$alert(this.getMessage, "Quantidade superior ao stock!", "error");
+          router.push({ name: "produtos" });
+          return;
+      }
+
       if(this.comentario !== "") {
         this.encomenda.comentarios.push({
           comentario: this.comentario,
@@ -114,6 +122,7 @@ export default {
           date: this.getCurrentDateTime()
         });
       }
+      this.update(); 
       this.$store.dispatch(`encomenda/${ADD_ENCOMENDA}`, this.encomenda).then(
         () => {
           this.$alert(this.getMessage, "Encomenda adicionada!", "success");
@@ -123,6 +132,11 @@ export default {
           this.$alert(`${err.message}`, "Erro", "error");
         }
       );
+    },
+    update() {
+        this.produto.stock--;
+        this.$store
+        .dispatch(`produto/${EDIT_PRODUTO}`, this.produto);
     },
     getCurrentDateTime() {
       const today = new Date();
@@ -137,8 +151,8 @@ export default {
     },
   },
   created() {
-    let produto = this.getProdutoById(this.$route.params.produtoId);
-    this.encomenda.referencia = produto.referencia;
+    this.produto = this.getProdutoById(this.$route.params.produtoId);
+    this.encomenda.referencia = this.produto.referencia;
     this.encomenda.cliente = this.getProfile.name;
     let x = setInterval(function() {
       this.seconds -= 1;

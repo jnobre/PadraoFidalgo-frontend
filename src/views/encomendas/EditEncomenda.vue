@@ -12,7 +12,7 @@
               <select id="sltEstado" class="form-control form-control-lg" v-model="encomenda.estado">
                 <option value>-- Seleciona o Estado --</option>
                 <option value="PENDENTE">Pendente</option>
-                <option value="VALIDADA">Validade</option>
+                <option value="VALIDADA">Validada</option>
                 <option value="EM CURSO">Em curso</option>
                 <option value="ENTREGUE">Entregue</option>
                 <option value="FINALIZADA">Finalizada</option>
