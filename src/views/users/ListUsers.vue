@@ -8,11 +8,6 @@
         <b-col cols="1"></b-col>
         <b-col>
           <router-link
-            :to="{name:'addUser'}"
-            tag="button"
-            class="btn btn-outline-success mr-2 mt-2"
-          ><i class="fas fa-plus-square"></i> ADICIONAR UTILIZADOR</router-link>
-          <router-link
             :to="{name:'admin'}"
             tag="button"
             class="btn btn-outline-info mr-2 mt-2"
@@ -24,7 +19,7 @@
       <!-- TABELA -->
       <b-row>
         <b-col cols="1"></b-col>
-        <b-col>
+        <b-col cols="12">
           <table class="table table-striped">
             <thead class="thead-dark">
               <tr>
@@ -33,6 +28,10 @@
                   <i class="fas fa-arrow-up" v-if="sortType===1" @click="sort()"></i>
                   <i class="fas fa-arrow-down" v-else  @click="sort()"></i>
                 </th>
+                <th scope="col">NIF</th>
+                <th scope="col">MORADA</th>
+                <th scope="col">TELEMOVEL</th>
+                <th scope="col">EMAIL</th>
                 <th scope="col">TIPO</th>
                 <th scope="col">DATA DE CRIAÇÃO</th>
                 <th scope="col">AÇÕES</th>
@@ -41,6 +40,10 @@
             <tbody>
               <tr v-for="user of users" :key="user._id">            
                 <td class="pt-4">{{user.name}}</td>
+                <td class="pt-4">{{user.nif}}</td>
+                <td class="pt-4">{{user.location.address}}, {{user.location.city}}, {{user.location.country}} </td>
+                <td class="pt-4">{{user.mobile}}</td>
+                <td class="pt-4">{{user.auth.email}}</td>
                 <td class="pt-4">{{user.type==="admin"?"Administrador":"Utilizador normal"}}</td>
                 <td class="pt-4">{{formatDate(user.registration_date)}}</td>
                 <td>

@@ -36,7 +36,6 @@
                 <th scope="col">CLIENTE</th>
                 <th scope="col">DATA DE ENTREGA</th>
                 <th scope="col">ESTADO</th>
-               <!-- <th scope="col">COMENTÁRIOS</th> -->
                 <th scope="col">AÇÕES</th>
               </tr>
             </thead>

@@ -86,14 +86,6 @@ const routes = [
     }
   },
   {
-    path: "/ranking",
-    name: "ranking",
-    component: () => import("@/views/Ranking.vue"),
-    meta: {
-      rule: "user"
-    }
-  }, 
-  {
     path: "/newencomenda",
     name: "newencomenda",
     component: () => import("@/views/encomendas/NewEncomenda.vue"),
