@@ -23,7 +23,7 @@
       <!--TABLE-->
       <b-row>
         <b-col cols="2"></b-col>
-        <b-col>
+        <b-col cols="15">
           <table class="table table-striped">
             <thead class="thead-dark">
               <tr>
@@ -34,6 +34,7 @@
                 </th>
                 <th scope="col">QUANTIDADE</th>
                 <th scope="col">CLIENTE</th>
+                <th scope="col">DATA DE ENTREGA</th>
                 <th scope="col">ESTADO</th>
                <!-- <th scope="col">COMENTÁRIOS</th> -->
                 <th scope="col">AÇÕES</th>
@@ -41,15 +42,11 @@
             </thead>
             <tbody>
               <tr v-for="encomenda of encomendas" :key="encomenda._id">
-                 <td class="pt-4">{{encomenda.referencia}}</td>
-                <td class="pt-4">{{encomenda.quantidade}}</td>
-                <td class="pt-4">{{encomenda.cliente}}</td>
-                <td class="pt-4">{{encomenda.estado}}</td>
-               <!-- <td class="pt-4">
-                  <div  v-for="comentario of encomenda.comentarios" :key="comentario.comentario">
-                    <b>Texto: </b>{{comentario.comentario}} <b>Cliente: </b> {{viewUser(comentario.user)}}  <b>Data: </b> {{formatDate(comentario.date)}}   <br/>
-                  </div>
-                </td> -->
+                 <td class="pt-5">{{encomenda.referencia}}</td>
+                <td class="pt-5">{{encomenda.quantidade}}</td>
+                <td class="pt-5">{{encomenda.cliente}}</td>
+                <td class="pt-5">{{formatDate(encomenda.data_entrega)}}</td>
+                <td class="pt-5">{{encomenda.estado}}</td>
                 <td>
                   <router-link
                     :to="{name:'editEncomenda', params:{encomendaId: encomenda._id}}"

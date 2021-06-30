@@ -117,7 +117,7 @@ export default {
       this.$store.dispatch(`encomenda/${ADD_ENCOMENDA}`, this.encomenda).then(
         () => {
           this.$alert(this.getMessage, "Encomenda adicionada!", "success");
-          router.push({ name: "listEncomendas" });
+          router.push({ name: "produtos" });
         },
         err => {
           this.$alert(`${err.message}`, "Erro", "error");

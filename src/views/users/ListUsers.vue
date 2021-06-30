@@ -39,8 +39,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="user of users" :key="user._id">    
-                console.log(users);            
+              <tr v-for="user of users" :key="user._id">            
                 <td class="pt-4">{{user.name}}</td>
                 <td class="pt-4">{{user.type==="admin"?"Administrador":"Utilizador normal"}}</td>
                 <td class="pt-4">{{formatDate(user.registration_date)}}</td>
@@ -50,11 +49,6 @@
                     tag="button"
                     class="btn btn-outline-success mr-2"
                   ><i class="fas fa-edit"></i> EDITAR</router-link>
-                  <button
-                    @click="viewUser(user._id)"
-                    type="button"
-                    class="btn btn-outline-success mr-2"
-                  ><i class="fas fa-search"></i> VER</button>
                   <button
                     @click="removeUser(user._id)"
                     type="button"
@@ -109,35 +103,6 @@ export default {
       if(u1.name > u2.name) return 1 * this.sortType
       else if(u1.name < u2.name) return -1 * this.sortType
       else return 0
-    },
-
-    viewUser(id) {
-      const user = this.users.find(user => user._id === id);
-      this.$fire({
-        title: user.auth.username,
-        html: this.generateTemplate(user),
-        imageUrl: require(`@/assets/avatars/${this.getUserLevelByPoints(user.gamification.points).avatar}.png`),
-        imageWidth: 150,
-        imageHeight: 150,
-        imageAlt: "Imagem desconhecida"
-      });
-    },
-
-    generateTemplate(user) {
-      return `
-          <h5>${user.name}</h5>
-          <p>
-          <b>Nome:</b> ${user.name} <br>
-          <b>NIF:</b> ${user.nif} <br>
-          <b>Mobile:</b> ${user.mobile} <br>
-          <b>Email:</b> ${user.auth.email} <br>
-          <b>Tipo de utilizador:</b> ${user.type==="admin"?"Administrador":"Utilizador normal"} <br>
-          <b>Data de registo:</b> ${this.formatDate(user.registration_date)} <br>
-          <b>Cidade:</b> ${user.location.city}<br>
-          <b>País:</b> ${user.location.country}<br>
-          <b>Morada:</b> ${user.location.address}
-          </p>
-        `
     },
     formatDate: d => 
     {

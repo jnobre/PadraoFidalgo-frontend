@@ -27,26 +27,33 @@
             </div>
             <div class="form-group">
             <input
-              v-model="user.birth_date"
-              type="date"
-              onmouseenter="(this.type='date')"
-              onmouseleave="(this.type='text')"
+              v-model="user.nif"
+              type="text"
               class="form-control form-control-lg"
-              id="txtBirthDate"
-              placeholder="escreve data de nascimento"
+              id="txtNif"
+              placeholder="NIF"
               required
             />
             </div>
             <div class="form-group">
-              <textarea
-                id="txtDescription"
+              <input
+                v-model="user.mobile"
+                type="number"
                 class="form-control form-control-lg"
-                placeholder="escreve descrição"
-                cols="30"
-                rows="10"
-                v-model="user.description"
+                id="txtMobile"
+                placeholder="Mobile"
                 required
-              ></textarea>
+              />
+            </div>
+            <div class="form-group">
+              <input
+                v-model="user.location.address"
+                type="text"
+                class="form-control form-control-lg"
+                id="txtAddress"
+                placeholder="Morada"
+                required
+              />
             </div>
             <div class="form-group">
               <input
@@ -54,7 +61,7 @@
                 type="text"
                 class="form-control form-control-lg"
                 id="txtCity"
-                placeholder="escreve cidade"
+                placeholder="Cidade"
                 required
               />
             </div>
@@ -64,64 +71,28 @@
                 type="text"
                 class="form-control form-control-lg"
                 id="txtCountry"
-                placeholder="escreve país"
+                placeholder="País"
                 required
               />
             </div>
-            <div class="form-group">
-              <input
-                v-model="user.gamification.points"
-                type="text"
-                min="0"
-                onmouseenter="(this.type='number')"
-                onmouseleave="(this.type='text')"
-                class="form-control form-control-lg"
-                id="txtPoints"
-                placeholder="escreve pontos"
-                
-              />
-            </div>
-              <div class="form-group">
-              <input
-                v-model="user.gamification.quiz"
-                type="text"
-                min="0"
-                onmouseenter="(this.type='number')"
-                onmouseleave="(this.type='text')"
-                class="form-control form-control-lg"
-                id="txtCountry"
-                placeholder="escreve último nível de quiz completo"
-                
-              />
-            </div>
-            
             <div class="form-group">
               <input
                 v-model="user.auth.username"
                 type="text"
                 class="form-control form-control-lg"
                 id="txtEmail"
-                placeholder="escreve username"
+                placeholder="Username"
                 required
               />
             </div>
             <div class="form-group">
               <input
-                v-model="user.auth.password"
-                type="password"
+                v-model="user.auth.email"
+                type="text"
                 class="form-control form-control-lg"
-                id="txtPassword"
-                placeholder="escreve password"
+                id="txtEmail"
+                placeholder="Email"
                 required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                v-model="user.auth.password"
-                type="password"
-                class="form-control form-control-lg"
-                id="txtConfirmPassword"
-                placeholder="confirma password"
               />
             </div>
             <button type="submit" class="btn btn-outline-success btn-lg mr-2">
