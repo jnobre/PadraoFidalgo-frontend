@@ -28,14 +28,20 @@ E comporta as seguintes funcionalidades:
 
 Para o desenvolvimento do frontend foi utilizado a framework Vue.js.
 
-# Wireframes
+# Mockups
 
-Foi utilizado a versão trial do programa Balsamiq para criação dos wireframes. Estão disponíveis na pasta Wireframes localizado neste projeto.
+Foi utilizado a versão trial do programa Balsamiq para criação dos mockups. Estão disponíveis na pasta mockups localizado neste projeto.
 
 # Template
 
 Os template foram implementados com base nos UX do projeto Animalec, que foi estudado ao longo desta uc.
 
-# Using json-server 
-To mock some dummy results
-https://github.com/typicode/json-server
+# API
+
+A arquitectura desta aplicação segue uam arquitectura baseada em serviços. Deste modo, a comunicação entre o Front-end e o Back-end é feita através de APIs REST. [Link para o projeto do Back-end](https://github.com/jnobre/PadraoFidalgo-backend).
+
+
+# Referências
+
+* [VueJS](https://vuejs.org/)
+* [Start Bootstrap](https://startbootstrap.com/)
