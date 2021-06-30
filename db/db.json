@@ -1,88 +1,120 @@
-{
-  "animals": [
-    {
-      "id": 1,
-      "name": "cão",
-      "group": "mamífero",
-      "level": 1,
-      "description": "O cão é o melhor amigo do homem",
-      "links": {
-        "photo": "https://www.purina.pt/sites/g/files/mcldtz1671/files/2018-03/cao-em-casa.jpg",
-        "video": "https:",
-        "sound": "https"
-      },
-      "active": true
-    },
-    {
-      "id": 2,
-      "name": "gato",
-      "group": "mamífero",
-      "level": 1,
-      "description": "O gato é o melhor amigo do homem",
-      "links": {
-        "photo": "https://www.royalcanin.es/wp-content/uploads/2017/10/bigotesnew.jpg",
-        "video": "https:",
-        "sound": "https"
-      },
-      "active": true
-    },
-    {
-      "id": 3,
-      "name": "pardal",
-      "group": "ave",
-      "level": 2,
-      "description": "O pardal é o melhor amigo do homem",
-      "links": {
-        "photo": "https://cdn.pixabay.com/photo/2019/07/23/00/55/sparrow-4356373_960_720.png",
-        "video": "https:",
-        "sound": "https"
-      },
-      "active": true
-    },
-    {
-      "id": 4,
-      "name": "cavalo",
-      "group": "mamífero",
-      "level": 2,
-      "description": "O cavalo é o melhor amigo do homem",
-      "links": {
-        "photo": "https://cdn.pixabay.com/photo/2017/03/29/20/02/arabian-2186313_960_720.png",
-        "video": "https:",
-        "sound": "https"
-      },
-      "active": true
-    }
-  ],
-  "login": {
-    "token": "12345",
-    "user": {
-      "name": "Ricardo Queirós",
-      "email": "ricardo.queiros@gmail.com",
-      "birthday": "19-04-1975",
-      "location": {
-        "city": "Porto",
-        "country": "Portugal"
-      },
-      "auth": {
-        "username": "joao",
-        "password": "12345"
-      },
-      "gamification": {
-        "quiz": 1,
-        "points": 0
-      }
-    }
+[{
+  "_id": {
+    "$oid": "60d88f8c052323eeecf72ec7"
   },
-  "quiz": [
-    {
-      "id": 1,
-      "name": "adasd",
-      "points": 12
-    },
-    {
-      "id": 1,
-      "name": "adasd",
-      "points": 12
-    }
-  ]
-}
+  "active": true,
+  "designacao": "MÃOS DE VACA",
+  "referencia": "EXE 12",
+  "resumo": "Várias linhas disponiveis para descrição do artigo.",
+  "precosiva": "4,60€",
+  "iva": "0,26€",
+  "precociva": "4,88€",
+  "stock": "10",
+  "unidade": "Kg",
+  "registration_date": {
+    "$date": "2021-06-27T14:47:40.985Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60d892b1052323eeecf72ec8"
+  },
+  "active": true,
+  "designacao": "DOBRADA",
+  "referencia": "EX. 13",
+  "resumo": "Várias linhas disponiveis para descrição do artigo.",
+  "precosiva": "3,65€",
+  "iva": "0,22€",
+  "precociva": "3,87€",
+  "stock": "10",
+  "unidade": "Kg",
+  "registration_date": {
+    "$date": "2021-06-27T15:01:05.514Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60d892e9052323eeecf72ec9"
+  },
+  "active": true,
+  "designacao": "PÁ",
+  "referencia": "EXE.14",
+  "resumo": "Várias linhas disponiveis para descrição do artigo.",
+  "precosiva": "3,90€",
+  "iva": "0,23€",
+  "precociva": "4,13€",
+  "stock": "100",
+  "unidade": "Kg",
+  "registration_date": {
+    "$date": "2021-06-27T15:02:01.331Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60d8932e052323eeecf72eca"
+  },
+  "active": true,
+  "designacao": "Peça de bife",
+  "referencia": "EXE.21",
+  "resumo": "Várias linhas disponiveis para descrição do artigo.",
+  "precosiva": "5,50€",
+  "iva": "0,33€",
+  "precociva": "5,83€",
+  "stock": "2",
+  "unidade": "Kg",
+  "registration_date": {
+    "$date": "2021-06-27T15:03:10.671Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60d893b1052323eeecf72ecc"
+  },
+  "active": true,
+  "designacao": "Maozinhas de borrego",
+  "referencia": "EXE. 36",
+  "resumo": "Várias linhas disponiveis para descrição do artigo.",
+  "precosiva": "2,50€",
+  "iva": "0,15€",
+  "precociva": "2,65€",
+  "stock": "10",
+  "unidade": "Kg",
+  "registration_date": {
+    "$date": "2021-06-27T15:05:21.915Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60d89401052323eeecf72ecd"
+  },
+  "active": true,
+  "designacao": "Bovinos",
+  "referencia": "EXE. 41",
+  "resumo": "Várias linhas disponiveis para descrição do artigo.",
+  "precosiva": "551,04€",
+  "iva": "126,74€",
+  "precociva": "677,76€",
+  "stock": "10",
+  "unidade": "Uni.",
+  "registration_date": {
+    "$date": "2021-06-27T15:06:41.241Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60d89445052323eeecf72ece"
+  },
+  "active": true,
+  "designacao": "Bovinos com 12 ou mais meses de idade",
+  "referencia": "EXE. 42",
+  "resumo": "Várias linhas disponiveis para descrição do artigo.",
+  "precosiva": "521,50€",
+  "iva": "31,29€",
+  "precociva": "552,79€",
+  "stock": "9",
+  "unidade": "Uni.",
+  "registration_date": {
+    "$date": "2021-06-27T15:07:49.989Z"
+  },
+  "__v": 0
+}]

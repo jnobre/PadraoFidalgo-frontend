@@ -40,6 +40,7 @@ Os template foram implementados com base nos UX do projeto Animalec, que foi est
 
 A arquitectura desta aplicação segue uam arquitectura baseada em serviços. Deste modo, a comunicação entre o Front-end e o Back-end é feita através de APIs REST. [Link para o projeto do Back-end](https://github.com/jnobre/PadraoFidalgo-backend).
 
+URL do link da API: [https://padraofidalgo-backend.herokuapp.com/](https://padraofidalgo-backend.herokuapp.com/)
 
 # Referências
 
